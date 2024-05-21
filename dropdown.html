@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Goblin+One&family=Imperial+Script&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins";
+
+}
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
+/*header*/
+h1{
+    text-align: center;
+    padding: 40px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+width: 100%;
+padding: 0 40px;
+
+}
+.nav-links li{
+    list-style-type: none;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.cpu{
+    background-color:lime;
+    padding: 5px 10px;
+    font-weight: 500;
+    width: 10%;
+    text-align: center;
+}
+.network{
+    background-color: aqua;
+    padding: 5px 10px;
+    font-weight: 500;
+    width: 10%;
+    text-align: center;
+}
+
+/* dropdowns */
+
+
+ p{
+    font-weight: 400;
+    font-size: 16px;
+    padding-top: 10px;
+    font-size: 14px;
+    padding-bottom: 40px;
+ }
+
+span{
+    color: blue;
+}
+h2{
+    font-weight: 600;
+    font-size: 13px;
+    color: blueviolet;
+}
+h4{
+    font-size: 24px;
+}
+select{
+    padding: 10px 20px;
+}
+
+button{
+margin-left: 10%;
+margin-top: 5%;
+margin-bottom: 2%;
+padding: 10px 20px;
+border: none;
+background-color: rgb(49, 244, 179);
+}
+button a{
+text-decoration: none;
+color: black;
+font-weight: 700;
+}
+.dropdown1{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+    align-items: center;
+max-width: 80%;
+margin-left: auto;
+margin-right: auto;
+padding-top: 40px;
+}
+.drp-top{
+padding-top: 50px;
+max-width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+.drp-top1{
+    padding-top:100px;
+display: grid;
+grid-template-columns: 2fr 2fr;
+    max-width: 90%;
+    align-items: center;
+padding-left: 130px;
+}
+i{
+    padding-right: 10px;
+}
+hr{
+margin-top: 60px;
+
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+
+
+    .navbar{
+        margin: 0px 0;
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+    .nav-links li {
+        margin: 10px;
+    }
+    .nav-links li a{
+        font-size: 12px;
+    }
+    .dropdown1{
+        grid-template-columns: 2fr;
+    }
+
+
+.drp-top1{
+grid-template-columns: 2fr;
+padding-left: 50px;
+}
+.cpu{
+    width: 30%;
+    text-align: center;
+}
+.network{
+    width: 30%;
+    text-align: center;
+}
+
+    select{
+        padding: 5px 5px;
+        margin: 10px 0px;
+        width: 90%;
+    }
+    h4{
+        font-size: 15px;
+    }
+    p{
+        font-size: 13px;
+    }
+    button{
+        margin-left: 70%;
+        margin-bottom: 20px;
+    }
+    h1{
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+}
+
+     </style>
+</head>
+<body>
+
+
+    <h1>Azure Stack HCI Sizing Tool</h1>
+    <hr>
+    <!-- header -->
+    <header>
+        <nav class="navbar">
+                <ul class="nav-links">
+                <li class="cpu"><a href="">CPU</a></li>
+                <li class="cpu"><a href="">Server</a></li>
+                <li class="cpu"><a href="">Resillency</a></li>
+                <li class="cpu"><a href="">Storage</a></li>
+                <li class="network"><i class="fa-solid fa-play"></i><a href="">Network</a></li>
+                <li><a href="">Availabilty</a></li>
+                <li><a href="">Result</a></li>
+                </ul>
+             </nav>
+    </header>
+<!-- header end -->
+
+<!-- dropdown section one start -->
+<!-- dropdown one start -->
+
+<div class="drp-top">
+<h4>Select <span>Network adapter</span></h4>
+<p>Option type</p>
+</div>
+<div class="dropdown1">
+<div>
+<h2>Network adapter OCP3</h2>
+<select name="" id="">
+    <option value="">Select adapter</option>
+    <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+    <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+    <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+    <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+    <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+</select>
+</div>
+
+
+<div>
+    <h2>Part Number</h2>
+    <select name="" id="">
+        <option value="">P10118-B21</option>
+        <option value="">P10118-B21</option>
+        <option value="">P10118-B21</option>
+        <option value="">P10118-B21</option>
+        <option value="">P10118-B21</option>
+    </select>
+    </div>
+</div>
+<!-- dropdown one end -->
+<!-- dropdown two start -->
+
+<div class="dropdown1">
+    <div>
+    <h2>Network adapter PCIe plug in</h2>
+    <select name="" id="">
+        <option value="">Select adapter</option>
+        <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+        <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+        <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+        <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+        <option value="">MarvellQL41232 Ethernet 10/25Gb 2-port SFP28 OCP3 Adapter for HPE</option>
+    </select>
+    </div>
+       <div>
+        <h2>Part Number</h2>
+        <select name="" id="">
+            <option value="">P10118-B21</option>
+            <option value="">P10118-B21</option>
+            <option value="">P10118-B21</option>
+            <option value="">P10118-B21</option>
+            <option value="">P10118-B21</option>
+        </select>
+        </div>
+    </div>
+   
+<!-- dropdown two end -->
+<!-- dropdown section end -->
+<hr>
+
+<div class="drp-top1">
+ <div>
+       <h4>Select <span>Network Switch</span></h4>
+       <p>Management Switch</p>
+</div>
+<div>
+    <h4>Switch <span>Speed</span></h4>
+    <p>List of switch models and their supported bandwidth speeds</p>
+</div>
+</div>
+
+<!--  -->
+
+<div class="dropdown1">
+    <div>
+    <h2>HPE FlexFabric 5901 Switch Series</h2>
+    <select name="" id="">
+        <option value="">Select Switch</option>
+        <option value=""> HPE FlexFabric 5944 Switch Series</option>
+        <option value=""> HPE FlexFabric 5945 Switch Series</option>
+    </select>
+    </div>
+     <div>
+        <h2>switch models</h2>
+        <select name="" id="">
+            <option value=""> 10GbE  |  25GbE  |  100GbE | 400GbE </option>
+            <option value="">Yes | Yes | Yes | n/a</option>
+            <option value="">Yes | n/a | Yes | Yes</option>
+        </select>
+        </div>
+</div>
+
+    <!--  -->
+
+ 
+    <div class="dropdown1">
+        <div>
+        <h2>HPE Aruba Networking CX3600 Switch Series</h2>
+        <select name="" id="">
+            <option value="">Select Switch</option>
+          <option value="">HPE Aruba Networking CX 8100 Switch Series</option>
+          <option value="">HPE Aruba Networking CX 8325 Switch Series</option>
+          <option value="">HPE Aruba Networking CX 8360 Switch Series</option>
+          <option value="">HPE Aruba Networking CX 9300 Switch Series</option>
+          <option value="">HPE Aruba Networking CX 10000 Switch Series</option>
+        </select>
+        </div>
+        <div>
+            <h2>switch models</h2>
+            <select name="" id="">
+                <option value=""> 10GbE  |  25GbE  |  100GbE | 400GbE </option>
+                <option value="">Yes | n/a | Yes | n/a</option>
+                <option value="">Yes | Yes | Yes | n/a</option>
+                <option value="">Yes | Yes | n/a | n/a</option>
+                <option value="">n/a | n/a | Yes | Yes</option>
+                <option value="">Yes | Yes | n/a | n/a</option>
+    
+            </select>
+            </div>
+        </div>
+        <!--  -->
+<button><a href="index.html">Prev</a></button>
+
+    
+</body>
+</html>
